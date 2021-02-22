@@ -85,7 +85,7 @@ let addRouter = [
         children: []
       },
       {
-        r_id: 100025,
+        r_id: 100027,
         r_name: roleName.viewOrder,
         path: "/viewOrder",
         iconCls: "el-icon-edit-outline", // 订单查看
@@ -104,7 +104,7 @@ let addRouter = [
       }
     ]
   },
-  {
+  { // 编辑器
     r_id: 100055,
     r_name: roleName.editor,
     path: "/",
@@ -133,6 +133,7 @@ let addRouter = [
       }
     ]
   },
+
   {
     r_id: 100000,
     r_name: roleName.systemManage,
@@ -176,6 +177,26 @@ let addRouter = [
             children: []
           }
         ]
+      }
+    ]
+  },
+  { // 论坛
+    r_id: 100066,
+    r_name: roleName.forum,
+    path: "/",
+    iconCls: "el-icon-edit", // 图标样式class
+    name: "forum",
+    component: () => import("@/views/layout/layout"),
+    meta: {role: ["superAdmin", "admin"]},
+    children: [
+      {
+        r_id: 100067,
+        r_name: roleName.forumindex,
+        path: "/forum",
+        iconCls: "fa fa-file-code-o", // 图标样式class
+        name: "forum",
+        component: () => import("@/views/forum/forumindex"),
+        children: []
       }
     ]
   },

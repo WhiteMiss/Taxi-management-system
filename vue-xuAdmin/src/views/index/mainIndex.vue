@@ -27,12 +27,12 @@
         <div class="card dbsx">
           <p class="title"><i class="fa fa-file-text-o"></i>待办事项</p>
           <ul>
-            <li><router-link to="#"><span>待审评论</span><span class="num">66</span></router-link></li>
-            <li><router-link to="#"><span>待审帖子</span><span class="num">66</span></router-link></li>
+            <li><router-link to="#"><span>待审评论</span><span class="num">23</span></router-link></li>
+            <li><router-link to="#"><span>待审帖子</span><span class="num">10</span></router-link></li>
           </ul>
           <ul>
-            <li><router-link to="#"><span>待审商品</span><span class="num">66</span></router-link></li>
-            <li><router-link to="#"><span>代发货</span><span class="num">66</span></router-link></li>
+            <li><router-link to="#"><span>待审订单</span><span class="num">30</span></router-link></li>
+            <li><router-link to="#"><span>待审事故</span><span class="num">01</span></router-link></li>
           </ul>
         </div>
       </el-col>
@@ -41,12 +41,11 @@
           <p class="title"><i class="fa fa-server"></i>版本信息</p>
           <div class="table">
             <p><span class="tit">当前版本</span>v1.0.0</p>
-            <p><span class="tit">基于框架</span>vue2.0全家桶 + element-ui</p>
-            <p><span class="tit">主要特色</span>单页面 / 响应式 / 无限级菜单 / 权限管理 / 极简</p>
-            <p><span class="tit">获取渠道</span>
+            <p><span class="tit">基于框架</span>vue2.0全家桶 + element-ui+rchart+egg.js</p>
+            <p><span class="tit">主要特色</span>为志愿者车主以及需求者提供平台</p>
+            <p><span class="tit">反馈渠道</span>
                 <span class="gitbox">
-                  <a target="_blank" href="https://github.com/Nirongxu/nodePlatform-eggjs"><el-button type="primary" icon="el-icon-download" size="small">github</el-button></a>
-                  <a target="_blank" href="https://gitee.com/nirongxu/nodePlatform-eggjs"><el-button type="primary" icon="el-icon-download" size="small">码云</el-button></a>
+                 www.xie-hao.xyz
                 </span>
             </p>
           </div>

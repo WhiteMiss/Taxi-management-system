@@ -8,9 +8,9 @@
       </div>
       <div class="loginBox">
         <div class="loginCon">
-          <p class="title">nodePlatform</p>
-          <p class="title">前台: vue + element-ui</p>
-          <p class="title">后台: egg.js</p>
+          <p class="title">Taxi platform</p>
+          <p class="title">出租车志愿者管理</p>
+          <p class="title">平台</p>
           <el-card shadow="always" class="login-module" v-if="smdl">
             <div slot="header" class="clearfix formTitlt">
               <span>密码登录</span>

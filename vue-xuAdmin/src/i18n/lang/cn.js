@@ -25,7 +25,9 @@ const cn = {
     systemManage: "系统管理",
     unitManage: "单位管理",
     roleManage: "角色管理",
-    systemSetting: "系统配置项"
+    systemSetting: "系统配置项",
+    forum: "论坛模块",
+    forumindex: "志愿者论坛"
   },
   rightMenu: {
     close: "关闭",
