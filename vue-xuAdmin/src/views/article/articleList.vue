@@ -24,7 +24,7 @@
       </el-table-column>
       <el-table-column
         prop="author"
-        label="作者"
+        label="角色"
         width="150">
       </el-table-column>
       <el-table-column

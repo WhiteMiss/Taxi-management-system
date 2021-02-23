@@ -6,6 +6,7 @@
  */
 export default {
   state: {
+    // lists: [],
     isCollapse: false,
     logoShow: false,
     uniquerouter: true,
@@ -16,6 +17,14 @@ export default {
     }]
   },
   mutations: {
+    // 记事本
+    // addItem (state, value) {
+    //   state.lists.push(value)
+    // },
+    // setIndex (state, value) {
+    //   state.index = value
+    // },
+
     addTab (state, arg) {
       state.isActive = arg.path
       if (state.tabnavBox[0] && state.tabnavBox[0].title !== "home") {

@@ -190,12 +190,21 @@ let addRouter = [
     meta: {role: ["superAdmin", "admin"]},
     children: [
       {
-        r_id: 100067,
+        r_id: 100067, // 论坛
         r_name: roleName.forumindex,
-        path: "/forum",
+        path: "/forumindex",
         iconCls: "fa fa-file-code-o", // 图标样式class
         name: "forum",
         component: () => import("@/views/forum/forumindex"),
+        children: []
+      },
+      {
+        r_id: 100068, // 查看帖子
+        r_name: roleName.postDetails,
+        path: "/postDetails",
+        iconCls: "fa fa-file-code-o", // 图标样式class
+        name: "postDetails",
+        component: () => import("@/views/forum/postDetails"),
         children: []
       }
     ]

@@ -38,7 +38,8 @@ const store = new Vuex.Store({
     visible: state => state.layout.visible,
     left: state => state.layout.left,
     top: state => state.layout.top,
-    rightNav: state => state.layout.rightNav
+    rightNav: state => state.layout.rightNav,
+    lists: state => state.layout.lists
   },
   modules: {
     routerData,

@@ -27,7 +27,8 @@ const cn = {
     roleManage: "角色管理",
     systemSetting: "系统配置项",
     forum: "论坛模块",
-    forumindex: "志愿者论坛"
+    forumindex: "志愿者论坛",
+    postDetails: "查看帖子"
   },
   rightMenu: {
     close: "关闭",
