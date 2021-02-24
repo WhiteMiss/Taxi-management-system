@@ -111,14 +111,15 @@ export default {
   #login {
     width: 100%;
     height: 100%;
-    background-color: #2d3a4b;
-    .loginConbox{
-      background: #2d3a4b;
-    }
+    // background-color: #2d3a4b;
+    background: url('../../assets/login/公路.jpg') center center no-repeat;
+    // .loginConbox{
+    //   background: #2d3a4b;
+    // }
     .header {
       height: 60px;
       position: relative;
-      background: #2d3a4b;
+      // background: #2d3a4b;
       /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
       .logo{
         margin-left: 30px;

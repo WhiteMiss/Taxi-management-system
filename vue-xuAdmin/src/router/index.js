@@ -193,7 +193,7 @@ let addRouter = [
         r_id: 100067, // 论坛
         r_name: roleName.forumindex,
         path: "/forumindex",
-        iconCls: "fa fa-file-code-o", // 图标样式class
+        iconCls: "el-icon-connection", // 图标样式class
         name: "forum",
         component: () => import("@/views/forum/forumindex"),
         children: []
@@ -202,9 +202,29 @@ let addRouter = [
         r_id: 100068, // 查看帖子
         r_name: roleName.postDetails,
         path: "/postDetails",
-        iconCls: "fa fa-file-code-o", // 图标样式class
+        iconCls: "el-icon-view", // 图标样式class
         name: "postDetails",
         component: () => import("@/views/forum/postDetails"),
+        children: []
+      }
+    ]
+  },
+  { // 积分奖励
+    r_id: 100088,
+    r_name: roleName.integral,
+    path: "/",
+    iconCls: "el-icon-trophy", // 图标样式class
+    name: "integral",
+    component: () => import("@/views/layout/layout"),
+    meta: {role: ["superAdmin", "admin"]},
+    children: [
+      {
+        r_id: 100089, // 积分兑换
+        r_name: roleName.exchange,
+        path: "/exchange",
+        iconCls: "el-icon-shopping-bag-1", // 图标样式class
+        name: "exchange",
+        component: () => import("@/views/integral/exchange"),
         children: []
       }
     ]

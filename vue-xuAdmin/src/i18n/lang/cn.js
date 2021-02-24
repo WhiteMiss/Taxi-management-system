@@ -28,7 +28,9 @@ const cn = {
     systemSetting: "系统配置项",
     forum: "论坛模块",
     forumindex: "志愿者论坛",
-    postDetails: "查看帖子"
+    postDetails: "查看帖子",
+    integral: "积分奖励",
+    exchange: "积分兑换"
   },
   rightMenu: {
     close: "关闭",

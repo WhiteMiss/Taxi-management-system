@@ -37,12 +37,12 @@
                     v-model="textarea"
                   >
                   </el-input>
-                  <button
+                  <el-button
                     type="primary"
                     style="margin-left: 9px; width: 100px"
                     plain
                     @click="adddetail()"
-                    >发表</button
+                    >发表</el-button
                   >
                 </div>
               </div>

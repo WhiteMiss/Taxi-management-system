@@ -15,11 +15,13 @@ import "element-ui/lib/theme-chalk/index.css"
 import "./assets/iconfont/iconfont.css"
 import "font-awesome/css/font-awesome.css"
 import "@/router/permission"
+import dataV from "@jiaminghi/data-view"
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(globalPlugin)
 Vue.use(permission)
+Vue.use(dataV)
 
 NProgress.inc(0.2)
 NProgress.configure({ easing: "ease", speed: 500, showSpinner: false })
