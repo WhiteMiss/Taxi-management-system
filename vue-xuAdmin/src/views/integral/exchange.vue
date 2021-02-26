@@ -13,19 +13,35 @@
         >
       </div>
     </el-col>
-    <el-col :span="12">
+       <el-col :span="12">
+        <div class="card bbxx">
+           <dv-border-box-1 :reverse="true">
+               <div class="left">
+          <p class="title"><i class="fa fa-server"></i>积分奖励商城</p>
+          <div class="table">
+            <p><span class="tit">公告</span>疫情物流公告</p>
+            <p>
+              <span class="tit">用户</span>用户
+            </p>
+          </div>
+               </div>
+           </dv-border-box-1>
+        </div>
+      </el-col>
+    <!-- <el-col :span="12">
       <div class="card bbxx">
         <p class="title"><i class="fa fa-server"></i>账户信息</p>
 <dv-scroll-ranking-board :config="config" style="width:500px;height:300px" />
       </div>
-    </el-col>
+    </el-col> -->
   </el-row>
 <el-row>
-  <el-col :span="6" v-for="(o, index) in 3" :key="o" :offset="index > 0 ? 3 : 0">
-    <el-card :body-style="{ padding: '0px' }">
-      <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+  <div class="card">
+  <el-col :span="6">
+    <el-card :body-style="{ padding: '10px' }">
+      <img src="../../assets/exchange/手环.jpg" class="image">
       <div style="padding: 14px;">
-        <span>好吃的汉堡</span>
+        <span>手环（100积分）</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
           <el-button type="text" class="button">兑换</el-button>
@@ -33,6 +49,43 @@
       </div>
     </el-card>
   </el-col>
+    <el-col :span="6">
+    <el-card :body-style="{ padding: '10px' }">
+      <img src="../../assets/exchange/双肩包.jpg" class="image">
+      <div style="padding: 14px;">
+        <span>双肩包（20积分）</span>
+        <div class="bottom clearfix">
+          <time class="time">{{ currentDate }}</time>
+          <el-button type="text" class="button">兑换</el-button>
+        </div>
+      </div>
+    </el-card>
+  </el-col>
+     <el-col :span="6">
+    <el-card :body-style="{ padding: '10px' }">
+      <img src="../../assets/exchange/积分卡.jpg" class="image">
+      <div style="padding: 14px;">
+        <span>积分卡（1000积分）</span>
+        <div class="bottom clearfix">
+          <time class="time">{{ currentDate }}</time>
+          <el-button type="text" class="button">兑换</el-button>
+        </div>
+      </div>
+    </el-card>
+  </el-col>
+      <el-col :span="6">
+    <el-card :body-style="{ padding: '10px' }">
+      <img src="../../assets/exchange/水壶1.jpg" class="image">
+      <div style="padding: 14px;">
+        <span>水壶1（50积分）</span>
+        <div class="bottom clearfix">
+          <time class="time">{{ currentDate }}</time>
+          <el-button type="text" class="button">兑换</el-button>
+        </div>
+      </div>
+    </el-card>
+  </el-col>
+  </div>
 </el-row>
   </div>
 </template>
@@ -42,42 +95,46 @@ export default {
   data () {
     return {
       currentDate: new Date(),
-      "config": {
-        "data": [
-          {
-            name: "周口",
-            value: 55123
-          },
-          {
-            name: "南阳",
-            value: 12022
-          },
-          {
-            name: "西峡",
-            value: 78932
-          }
+      // "config": {
+      //   "data": [
+      //     {
+      //       name: "周口",
+      //       value: 55123
+      //     },
+      //     {
+      //       name: "南阳",
+      //       value: 12022
+      //     },
+      //     {
+      //       name: "西峡",
+      //       value: 78932
+      //     }
 
-        ],
-        unit: "单位",
-        valueFormatter ({ value }) {
-          console.warn(arguments)
-          const reverseNumber = (value + "").split("").reverse()
-          let valueStr = ""
+      //   ],
+      //   unit: "单位",
+      //   valueFormatter ({ value }) {
+      //     console.warn(arguments)
+      //     const reverseNumber = (value + "").split("").reverse()
+      //     let valueStr = ""
 
-          while (reverseNumber.length) {
-            const seg = reverseNumber.splice(0, 3).join("")
-            valueStr += seg
-            if (seg.length === 3) valueStr += ","
-          }
+      //     while (reverseNumber.length) {
+      //       const seg = reverseNumber.splice(0, 3).join("")
+      //       valueStr += seg
+      //       if (seg.length === 3) valueStr += ","
+      //     }
 
-          return valueStr.split("").reverse().join("")
-        }
-      }
+      //     return valueStr.split("").reverse().join("")
+      //   }
+      // }
     }
   }
 }
 </script>
 <style>
+.card .el-card{
+ margin: 10px;
+}
+
 .left .title{
 padding-left: 30px;
 padding-top: 15px;
