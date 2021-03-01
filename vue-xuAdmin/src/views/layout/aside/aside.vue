@@ -5,6 +5,7 @@
         <p v-if="$store.getters.logoShow">car</p>
         <p v-else>出租车系统</p>
       </div>
+      <!-- #03152A -->
       <el-menu :default-active="$route.path" class="el-menu-vertical"
                @select="selectmenu"
                :collapse="$store.getters.isCollapse"
@@ -30,7 +31,7 @@
             <span slot="title">{{ $t(`routeName.${item.name}`) }}</span>
           </el-menu-item>
         </template>
-
+       <div id="logo-bottom"></div>
       </el-menu>
     </el-aside>
   </div>
@@ -97,7 +98,14 @@ export default {
       #{$side}-#{$prop}: $value;
     }
   }
-
+  #logo-bottom{
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  background:url(../../../assets/layout/侧边栏条纹.png) no-repeat;
+  width:145px;
+  height: 250px;
+  }
   #asideNav {
     width: auto !important;
     display: flex;
@@ -112,8 +120,10 @@ export default {
         height: 50px;
         line-height: 50px;
         text-align: center;
-        font-size: 16px;
-        color: #5e6d82;
+        font-size: 25px;
+        // color: #5e6d82;
+        color: white;
+        font-family:STXingkai;
       }
     }
     .el-menu-vertical:not(.el-menu--collapse) {

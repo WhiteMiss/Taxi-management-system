@@ -44,7 +44,7 @@
         <span>手环（100积分）</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button">兑换</el-button>
+          <el-button type="text" class="button" :plain="true" @click="open4">兑换</el-button>
         </div>
       </div>
     </el-card>
@@ -56,7 +56,7 @@
         <span>双肩包（20积分）</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button">兑换</el-button>
+          <el-button type="text" class="button" :plain="true" @click="open2">兑换</el-button>
         </div>
       </div>
     </el-card>
@@ -68,7 +68,7 @@
         <span>积分卡（1000积分）</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button">兑换</el-button>
+          <el-button type="text" class="button" :plain="true" @click="open4 ">兑换</el-button>
         </div>
       </div>
     </el-card>
@@ -80,7 +80,7 @@
         <span>水壶1（50积分）</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button">兑换</el-button>
+          <el-button type="text" class="button" :plain="true" @click="open2">兑换</el-button>
         </div>
       </div>
     </el-card>
@@ -94,7 +94,7 @@ export default {
   name: "exchange",
   data () {
     return {
-      currentDate: new Date(),
+      currentDate: new Date()
       // "config": {
       //   "data": [
       //     {
@@ -127,10 +127,24 @@ export default {
       //   }
       // }
     }
+  },
+  methods: {
+    open2 () {
+      this.$message({
+        message: "恭喜你，兑换成功",
+        type: "success"
+      })
+    },
+    open4 () {
+      this.$message.error("不好意思，积分不够")
+    }
   }
 }
 </script>
 <style>
+.exchange .card{
+  border-radius: 30px;
+}
 .card .el-card{
  margin: 10px;
 }

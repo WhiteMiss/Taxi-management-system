@@ -1,6 +1,6 @@
 <template>
     <div>
-      <p class="title"><i class="el-icon-tickets"></i>最新10条等待处理订单</p>
+      <p class="title"><i class="el-icon-tickets"></i>最新6条等待处理订单</p>
       <el-table
         border
         :data="tableData"
@@ -76,35 +76,35 @@ export default {
         tag: "已完成"
       }, {
         odd: "2021022212345602",
-        name: "王小虎",
+        name: "王小",
 
         amount: "130分",
         date: "2021-02-22",
         tag: "进行中"
       }, {
         odd: "2021022212345603",
-        name: "王小虎",
+        name: "小虎",
 
         amount: "680分",
         date: "2021-02-22",
         tag: "已完成"
       }, {
         odd: "2021022212345604",
-        name: "王小虎",
+        name: "王三",
 
         amount: "190分",
         date: "2021-02-22",
         tag: "进行中"
       }, {
         odd: "201801012345605",
-        name: "王小虎",
+        name: "王五",
 
         amount: "170分",
         date: "2018-01-04",
         tag: "已完成"
       }, {
         odd: "201801012345606",
-        name: "王小虎",
+        name: "王虎",
 
         amount: "670分",
         date: "2018-01-04",

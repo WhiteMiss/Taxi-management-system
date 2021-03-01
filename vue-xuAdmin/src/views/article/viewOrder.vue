@@ -59,7 +59,7 @@
        <el-form-item label="需求者评价"  label-width="150px">
         <div class="block">
           <span class="demonstration">1-5星</span>
-          <el-rate v-model="value2" :colors="colors"> </el-rate>
+          <el-rate v-model="value3" :colors="colors"> </el-rate>
         </div>
       </el-form-item>
     </el-form>
@@ -87,6 +87,7 @@ export default {
       restaurants: [],
       value1: 0,
       value2: 0,
+      value3: 0,
       colors: ["#99A9BF", "#F7BA2A", "#FF9900"] // 等同于 { 2: '#99A9BF', 4: { value: '#F7BA2A', excluded: true }, 5: '#FF9900' }
     }
   },
