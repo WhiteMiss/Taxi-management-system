@@ -34,8 +34,8 @@
           <ul>
             <li @click="drawer1 = true">
               <router-link to="" class="kjfs kjfs-grennn"
-                ><span><i class="fa fa-cloud-upload fa-2x"></i></span
-                ><span>文件上传 </span></router-link
+                ><span><i class="el-icon-location-information fa-2x"></i></span
+                ><span>当前位置 </span></router-link
               >
             </li>
             <el-drawer
@@ -121,8 +121,7 @@
           <div class="table">
             <p><span class="tit">当前版本</span>v1.0.0</p>
             <p>
-              <span class="tit">基于框架</span>vue2.0+
-              element+echart+egg.js+ajax
+              <span class="tit">基于框架</span>vue2.0+element+es6+egg
             </p>
             <p>
               <span class="tit">主要特色</span>为志愿者车主以及需求者提供平台
@@ -377,7 +376,9 @@ $list1: $bluee $pinkk $yelloww $grennn $purplee $lightBluee;
   padding-#{$top}: 10px;
   @extend %shadow;
 }
-.amap-demo {
-      height: 300px;
+//地图
+   .map {
+        width: 100%;
+        height: 400px;
     }
 </style>

@@ -11,6 +11,16 @@
           <p class="title">Taxi platform</p>
           <p class="title">出租车志愿者管理</p>
           <p class="title">平台</p>
+      <!-- 轮播 -->
+  <div class="block title">
+
+    <el-carousel height="150px">
+      <el-carousel-item v-for="item in titleList" :key="item">
+        <h3 class="small">{{ item }}</h3>
+      </el-carousel-item>
+    </el-carousel>
+  </div>
+
           <el-card shadow="always" class="login-module" v-if="smdl">
             <div slot="header" class="clearfix formTitlt">
               <span>密码登录</span>
@@ -33,8 +43,8 @@
               <p class="smalltxt">
                 <router-link class="a" to="#">忘记密码</router-link>
                 <router-link class="a" to="#">忘记会员名</router-link>
-                <!-- <router-link class="a" to="#" >免费注册</router-link> -->
-                <el-button type="primary" icon="el-icon-circle-plus-outline" size="mini" @click="addUserFn" plain>添加账号</el-button>
+                <router-link class="a" to="#" >免费注册</router-link>
+                <!-- <el-button type="primary" icon="el-icon-circle-plus-outline" size="mini" @click="addUserFn" plain>添加账号</el-button> -->
               </p>
             </el-form>
           </el-card>
@@ -77,7 +87,12 @@ export default {
       loginForm: {
         username: "admin",
         password: "admin"
-      }
+      },
+      titleList: [
+        "这晚霞清风，山川河海，所有的温柔陷落都是神明的，神明是你的，我也是你的",
+        "神明是你的，我也是你的",
+        "还好有生活的烟火，慢慢淡化了对你的思念"
+      ]
     }
   },
   methods: {
@@ -122,6 +137,25 @@ export default {
 }
 </script>
 <style lang="scss">
+//轮播
+.el-carousel__item h3 {
+    color: white;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+    text-align: center;
+  }
+  .el-carousel__item:nth-child(2n) {
+     background-color:rgba(220,220,220,0.1);
+  }
+  .el-carousel__item:nth-child(2n+1) {
+     background-color:rgba(220,220,220,0.1);
+  }
+  // .block{
+  //   float:left
+  // }
+
   #login {
     width: 100%;
     height: 100%;

@@ -7,7 +7,7 @@
             <div class="left">
           <p class="title"><i class="fa fa-file-text-o"></i>积分数值</p>
           <dv-decoration-9 style="width: 150px; height: 150px ;margin-left:40%"
-            >66</dv-decoration-9
+            >{{sum}}</dv-decoration-9
           ></div>
           </dv-border-box-1
         >
@@ -41,7 +41,7 @@
     <el-card :body-style="{ padding: '10px' }">
       <img src="../../assets/exchange/手环.jpg" class="image">
       <div style="padding: 14px;">
-        <span>手环（100积分）</span>
+        <span>手环（888积分）</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
           <el-button type="text" class="button" :plain="true" @click="open4">兑换</el-button>
@@ -53,10 +53,10 @@
     <el-card :body-style="{ padding: '10px' }">
       <img src="../../assets/exchange/双肩包.jpg" class="image">
       <div style="padding: 14px;">
-        <span>双肩包（20积分）</span>
+        <span>双肩包（{{boxValue}}积分）</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button" :plain="true" @click="open2">兑换</el-button>
+          <el-button type="text" class="button" :plain="true" @click="open2();boxCount()">兑换</el-button>
         </div>
       </div>
     </el-card>
@@ -77,10 +77,10 @@
     <el-card :body-style="{ padding: '10px' }">
       <img src="../../assets/exchange/水壶1.jpg" class="image">
       <div style="padding: 14px;">
-        <span>水壶1（50积分）</span>
+        <span>水壶1（{{jugValue}}积分）</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button" :plain="true" @click="open2">兑换</el-button>
+          <el-button type="text" class="button" :plain="true" @click="open2();jugCount()">兑换</el-button>
         </div>
       </div>
     </el-card>
@@ -94,6 +94,9 @@ export default {
   name: "exchange",
   data () {
     return {
+      sum: "666",
+      boxValue: "55",
+      jugValue: "50",
       currentDate: new Date()
       // "config": {
       //   "data": [
@@ -131,12 +134,18 @@ export default {
   methods: {
     open2 () {
       this.$message({
-        message: "恭喜你，兑换成功",
+        message: "恭喜你，兑换成功,稍后有客服联系",
         type: "success"
       })
     },
     open4 () {
       this.$message.error("不好意思，积分不够")
+    },
+    boxCount () {
+      this.sum = this.sum - this.boxValue
+    },
+    jugCount () {
+      this.sum = this.sum - this.jugValue
     }
   }
 }
