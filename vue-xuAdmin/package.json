@@ -26,6 +26,7 @@
     "scriptjs": "^2.5.8",
     "sortablejs": "^1.7.0",
     "vue": "^2.5.2",
+    "vue-amap": "^0.5.10",
     "vue-i18n": "^8.4.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",

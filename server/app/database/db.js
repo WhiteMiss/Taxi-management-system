@@ -1,7 +1,7 @@
 /**
  * Created by WebStorm.
- * User: nirongxu
- * Date: 2019-01-25
+ * User: xiehao
+ * Date: 2021-03-01
  * Description:
  统一主键，名称是 id，类型是 UUID；
  所有字段默认为 NULL，除非显式指定；

@@ -1,4 +1,4 @@
-import en from "../i18n/lang/en"
+import en from "../i18n/lang/en" // 英文对照表
 import cn from "../i18n/lang/cn"
 import Vue from "vue"
 import Router from "vue-router"
@@ -17,8 +17,9 @@ Router.prototype.push = function push (location) {
   return routerPush.call(this, location).catch(error => error)
 }
 Vue.use(Router)
-let routeName = en.routeName
+let routeName = en.routeName // 从英文翻译对照表获取路由的英文名字，当做路由'name'属性的值
 let roleName = cn.routeName
+// 不需要权限的路由
 let defaultRouter = [
   { path: "/",
     redirect: "/index",
@@ -32,6 +33,13 @@ let defaultRouter = [
     hidden: true,
     children: []
   },
+  // {
+  //   path: "/loginTable",
+  //   component: () => import("@/components/login/loginTable"),
+  //   name: "loginTable",
+  //   hidden: true,
+  //   children: []
+  // },
   {
     path: "/",
     iconCls: "fa fa-dashboard", // 图标样式class
@@ -79,7 +87,7 @@ let addRouter = [
         r_id: 100024,
         r_name: roleName.articleList,
         path: "/articleList",
-        iconCls: "el-icon-edit-outline", // 图标样式class
+        iconCls: "el-icon-document", // 订单列表
         name: "articleList",
         component: () => import("@/views/article/articleList"),
         children: []
@@ -88,7 +96,7 @@ let addRouter = [
         r_id: 100027,
         r_name: roleName.viewOrder,
         path: "/viewOrder",
-        iconCls: "el-icon-edit-outline", // 订单查看
+        iconCls: "el-icon-document-checked", // 订单详情
         name: "viewOrder",
         component: () => import("@/views/article/viewOrder"),
         children: []
@@ -97,7 +105,7 @@ let addRouter = [
         r_id: 100025,
         r_name: roleName.commentList,
         path: "/commentList",
-        iconCls: "el-icon-edit-outline", // 图标样式class
+        iconCls: "el-icon-chat-line-square", // 评论
         name: "commentList",
         component: () => import("@/views/article/commentList"),
         children: []

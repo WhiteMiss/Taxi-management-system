@@ -33,11 +33,11 @@
               <p class="smalltxt">
                 <router-link class="a" to="#">忘记密码</router-link>
                 <router-link class="a" to="#">忘记会员名</router-link>
-                <router-link class="a" to="#">免费注册</router-link>
+                <!-- <router-link class="a" to="#" >免费注册</router-link> -->
+                <el-button type="primary" icon="el-icon-circle-plus-outline" size="mini" @click="addUserFn" plain>添加账号</el-button>
               </p>
             </el-form>
           </el-card>
-
           <el-card shadow="always" class="login-module" v-else>
             <div slot="header" class="clearfix formTitlt">
               <span>扫码登录</span>
@@ -62,12 +62,17 @@
         </div>
       </div>
     </div>
+    <!-- 弹窗 -->
+<user-info v-if="dialogVisible" :title="title" :dialogVisible="dialogVisible" :userId="userId" @successCallback="successCallback"/>
   </div>
 </template>
 <script>
+import loginTable from "../../components/login/loginTable"
 export default {
+  components: { loginTable },
   data () {
     return {
+      dialogVisible: false,
       smdl: true,
       loginForm: {
         username: "admin",
@@ -76,6 +81,15 @@ export default {
     }
   },
   methods: {
+    successCallback () {
+      this.dialogVisible = false
+      this.getList()
+    },
+    addUserFn () {
+      this.dialogVisible = true
+      this.title = "添加账号"
+      this.userId = ""
+    },
     submitForm () {
       let that = this
       console.log(this.$axios)

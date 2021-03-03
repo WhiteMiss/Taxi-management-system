@@ -1,10 +1,9 @@
 /**
  * Created by WebStorm.
- * User: nirongxu
- * Date: 2019-03-01
+ * User: xiehao
+ * Date: 2021/2/8
  * Description: 文件描述
  */
-
 const Controller = require("egg").Controller
 
 class GetShareInfoController extends Controller {

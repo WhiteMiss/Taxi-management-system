@@ -61,6 +61,15 @@
                   </div>
                 </div>
                 <div style="margin:0px 60px">斑驳的夜色撞进了少年的心房，古木下秋千晃荡，破败的栅栏围着原野。我聆听着风的吟唱。指尖轻划过野草，张开双手风与我撞了满怀。静谧的夜笼罩着苍穹，点点星光映照着苍茫大道，抬眸望一片星海灿烂，望一片前途无量</div>
+                 <div class="demo-type">
+                  <div style="width: 40px">
+                    <el-avatar
+                      src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+                    ></el-avatar>
+                    <h6 style="text-align: center">谢浩</h6>
+                  </div>
+                </div>
+                <div style="margin:0px 60px">常是闻卿亭西我山南 各抖襟上雨</div>
                <div>
                 <ul  class="box">
             <li v-for="(item,index) in detailList" :key="index"  @click="choose(index)" :class="{active: index == current && current !== ''}">

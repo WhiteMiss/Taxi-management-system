@@ -1,9 +1,9 @@
-/**
- * Created by WebStorm.
- * User: Administrator
- * Date: 2019/5/5
- * Description: 对超级管理员进行操作的时候做权限校验
- */
+
+//  Created by WebStorm.
+//  User: Administrator
+//  Date: 2021/3/1
+//  Description: 对超级管理员进行操作的时候做权限校验
+
 module.exports = () => {
   return async function (ctx, next) {
     let tagRoleName = "",

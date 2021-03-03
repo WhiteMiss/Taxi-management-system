@@ -25,19 +25,44 @@
               >
             </li>
             <li>
-              <router-link to="/pagePermissions" class="kjfs kjfs-yelloww"
+              <router-link to="/roleManage" class="kjfs kjfs-yelloww"
                 ><span><i class="fa fa-universal-access fa-2x"></i></span
                 ><span>权限测试</span></router-link
               >
             </li>
           </ul>
           <ul>
-            <li>
-              <router-link to="/upload" class="kjfs kjfs-grennn"
+            <li @click="drawer1 = true">
+              <router-link to="" class="kjfs kjfs-grennn"
                 ><span><i class="fa fa-cloud-upload fa-2x"></i></span
-                ><span>文件上传</span></router-link
+                ><span>文件上传 </span></router-link
               >
             </li>
+            <el-drawer
+              title="地图"
+              :visible.sync="drawer1"
+              :with-header="false"
+            >
+             <div class="amap-page-container">
+    <div :style="{width:'100%',height:'300px'}">
+      <el-amap vid="amap" :plugin="plugin" class="amap-demo" :center="center">
+      </el-amap>
+    </div>
+
+
+    <div class="toolbar">
+        <span v-if="loaded">
+          location: lng = {{ lng }} lat = {{ lat }}
+        </span>
+      <span v-else>正在定位</span>
+    </div>
+    <div
+      v-on:click="req_post()"
+    >
+      查询周边
+    </div>
+  </div>
+            </el-drawer>
             <!-- <li><router-link to="/navClassifies" class="kjfs kjfs-purplee"><span><i class="fa el-icon-menu fa-2x"></i></span><span>查看日历</span></router-link></li> -->
             <li @click="drawer = true">
               <router-link to="" class="kjfs kjfs-purplee"
@@ -96,8 +121,8 @@
           <div class="table">
             <p><span class="tit">当前版本</span>v1.0.0</p>
             <p>
-              <span class="tit">基于框架</span>vue2.0全家桶 +
-              element-ui+echart+egg.js+ajax
+              <span class="tit">基于框架</span>vue2.0+
+              element+echart+egg.js+ajax
             </p>
             <p>
               <span class="tit">主要特色</span>为志愿者车主以及需求者提供平台
@@ -130,19 +155,63 @@
 <script>
 import LineEcharts from "../../components/ECharts/lineEcharts"
 import Maintable from "../table/maintable"
+// import { AMapManager } from 'vue-amap';
+// eslint-disable-next-line no-undef
+
 export default {
   name: "mainIndex",
   components: { Maintable, LineEcharts },
   data () {
+    const self = this
     return {
       drawer: false,
-      value: new Date()
+      drawer1: false,
+      value: new Date(),
+
+      // 地图
+      center: [121.59996, 31.197646],
+      lng: 0,
+      lat: 0,
+      loaded: false,
+      plugin: [{
+        enableHighAccuracy: true, // 是否使用高精度定位，默认:true
+        timeout: 100, // 超过10秒后停止定位，默认：无穷大
+        maximumAge: 0, // 定位结果缓存0毫秒，默认：0
+        convert: true, // 自动偏移坐标，偏移后的坐标为高德坐标，默认：true
+        showButton: true, // 显示定位按钮，默认：true
+        buttonPosition: "RB", // 定位按钮停靠位置，默认：'LB'，左下角
+        showMarker: true, // 定位成功后在定位到的位置显示点标记，默认：true
+        showCircle: true, // 定位成功后用圆圈表示定位精度范围，默认：true
+        panToLocation: true, // 定位成功后将定位到的位置作为地图中心点，默认：true
+        zoomToAccuracy: true, // 定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：f
+        extensions: "all",
+        pName: "Geolocation",
+        events: {
+          init (o) {
+            // o 是高德地图定位插件实例
+            o.getCurrentPosition((status, result) => {
+              console.log(result)
+              if (result && result.position) {
+                self.lng = result.position.lng
+                self.lat = result.position.lat
+                self.center = [self.lng, self.lat]
+                self.loaded = true
+                self.$nextTick()
+              }
+            })
+          }
+        }
+      }]
+
+
     }
   },
   mounted () {
     this.selfAdaption()
   },
   methods: {
+
+
     // echart自适应
     selfAdaption () {
       let that = this
@@ -308,4 +377,7 @@ $list1: $bluee $pinkk $yelloww $grennn $purplee $lightBluee;
   padding-#{$top}: 10px;
   @extend %shadow;
 }
+.amap-demo {
+      height: 300px;
+    }
 </style>

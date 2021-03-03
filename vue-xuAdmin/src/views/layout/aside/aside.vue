@@ -9,7 +9,7 @@
       <el-menu :default-active="$route.path" class="el-menu-vertical"
                @select="selectmenu"
                :collapse="$store.getters.isCollapse"
-               background-color="#03152A"
+               background-color="#4682B4"
                text-color="rgba(255,255,255,.7)"
                active-text-color="#ffffff"
                :router="$store.getters.uniquerouter"
@@ -147,8 +147,8 @@ export default {
         font-size: 18px;
       }
       .el-menu-item {
-        background-color: #020f1d !important;
-        border-bottom: 1px solid #020f1d;
+        // background-color: #020f1d !important;
+        // border-bottom: 1px solid #020f1d;
         &:hover {
           color: #ffffff !important;
           background-color: #375573 !important;
