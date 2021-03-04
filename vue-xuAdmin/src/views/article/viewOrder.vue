@@ -16,11 +16,9 @@
       </el-form-item>
       <!-- <el-form-item label="是否置顶">
         <el-switch v-model="article.top"/>
-      </el-form-item>
-
-      <el-form-item>
-        <el-button class="subBtn" type="primary" @click="submitArticle">发布</el-button>
       </el-form-item> -->
+
+     
       <br />
       <el-form-item label="周围图上传" label-width="95px">
         <el-upload
@@ -62,9 +60,13 @@
           <el-rate v-model="value3" :colors="colors"> </el-rate>
         </div>
       </el-form-item>
+       <el-form-item>
+        <el-button class="subBtn" type="primary" @click="submitArticle">发布</el-button>
+      </el-form-item>
     </el-form>
     <h2>评价</h2>
     <div ref="editor" style="text-align: left"></div>
+    
   </div>
 </template>
 
@@ -232,6 +234,6 @@ export default {
 }
 
 .w-e-text-container {
-  height: 600px !important;
+  height: 200px !important;
 }
 </style>

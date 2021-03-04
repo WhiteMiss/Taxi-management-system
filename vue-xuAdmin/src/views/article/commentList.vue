@@ -11,7 +11,7 @@
         width="200">
       </el-table-column>
       <el-table-column
-        prop="article_title"
+        prop="article_id"
         label="所属帖子">
       </el-table-column>
       <el-table-column
@@ -102,9 +102,9 @@ export default {
             let seconds = d.getSeconds() < 10 ? "0" + d.getSeconds() : d.getSeconds()
             response.data.rows[i].createdAt = d.getFullYear() + "-" + moth + "-" + date + " " + hours + ":" + minutes + ":" + seconds
 
-            // if (response.data.rows[i].content.length > 22) {
-            //   response.data.rows[i].content = response.data.rows[i].content.substring(0, 22) + "..."
-            // }
+            if (response.data.rows[i].content.length > 22) {
+              response.data.rows[i].content = response.data.rows[i].content.substring(0, 22) + "..."
+            }
             // if (response.data.rows[i].article_title.length > 22) {
             //   response.data.rows[i].article_title = response.data.rows[i].article_title.substring(0, 22) + "..."
             // }

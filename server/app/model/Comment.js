@@ -15,6 +15,10 @@ module.exports = app => {
       type: STRING,
       allowNull: false,
     }, // 角色id
+    author_name: {
+      type: STRING,
+      allowNull: false,
+    }, // 角色id
     article_id: {
       type: STRING,
       allowNull: false,
@@ -23,6 +27,11 @@ module.exports = app => {
       type: INTEGER,
       defaultValue: 0,
     }, //  点赞数
+    // author: {
+    //   type: STRING,
+    //   allowNull: false,
+    // },
+    // title: { type: STRING, allowNull: false },
   })
 
   return Comment

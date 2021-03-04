@@ -71,13 +71,22 @@
                 </div>
                 <div style="margin:0px 60px">常是闻卿亭西我山南 各抖襟上雨</div>
                <div>
-                <ul  class="box">
+
+                   <div class="demo-type">
+                  <div style="width: 40px">
+                    <el-avatar
+                    :src="$store.getters.info.avatar"
+                    ></el-avatar>
+                    <h6 style="text-align: center ;width:40px"> {{this.$store.getters.info.name}}</h6>
+                  </div>
+                </div>
+
             <li v-for="(item,index) in detailList" :key="index"  @click="choose(index)" :class="{active: index == current && current !== ''}">
                 <div>
-                    <p>{{item.textarea}}</p>
+                    <p style="margin:0px 60px">{{item.textarea}}</p>
                 </div>
             </li>
-        </ul>
+
         </div>
                 <div class="bottom clearfix">
                   <!-- <time class="time">{{ currentDate }}</time> -->

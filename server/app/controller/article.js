@@ -18,7 +18,7 @@ class ArticleController extends Controller {
     if (articleResult) {
       result = {
         code: 200,
-        message: "订单发布成功",
+        message: "发布成功",
       }
     } else {
       result = {

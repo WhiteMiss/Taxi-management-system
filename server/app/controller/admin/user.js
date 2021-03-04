@@ -50,6 +50,7 @@ class UserController extends Controller {
     const keys = this.config.keys
     let results = ""
     const myPassword = this.ctx.session.admin.user.password
+    console.log(1111111)
     const myId = this.ctx.session.user.id
     const oldPass = await cryptoMd5(oldPassword, keys)
 

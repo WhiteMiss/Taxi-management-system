@@ -10,6 +10,7 @@
           <langSelect/>
         </li>
         <li>{{ this.$store.getters.info.role }}</li>
+   
         <li>
           <el-dropdown @command="handleCommand">
                   <span class="el-dropdown-link">
