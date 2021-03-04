@@ -134,6 +134,7 @@ export default {
           that.total = response.data.count
           that.articletData = response.data.rows
           console.log(postdata)
+          console.log(response.data.rows)
         })
         .catch(function (error) {
           console.log(error)
@@ -145,8 +146,10 @@ export default {
       currentPage: 1,
       pageSize: 10,
       sort: null
+
     })
   }
+
 }
 </script>
 

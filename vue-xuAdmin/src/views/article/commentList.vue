@@ -6,13 +6,13 @@
       max-height="550">
       <el-table-column
         fixed
-        prop="createdAt"
-        label="评论时间"
+        prop="created_at"
+        label="投诉时间"
         width="200">
       </el-table-column>
       <el-table-column
         prop="article_title"
-        label="所属文章">
+        label="所属帖子">
       </el-table-column>
       <el-table-column
         prop="content"
@@ -54,7 +54,9 @@ export default {
       total: 0,
       currentPage: 1,
       sort: null,
-      commentData: []
+      commentData: [
+
+      ]
     }
   },
   methods: {
@@ -100,19 +102,26 @@ export default {
             let seconds = d.getSeconds() < 10 ? "0" + d.getSeconds() : d.getSeconds()
             response.data.rows[i].createdAt = d.getFullYear() + "-" + moth + "-" + date + " " + hours + ":" + minutes + ":" + seconds
 
-            if (response.data.rows[i].content.length > 22) {
-              response.data.rows[i].content = response.data.rows[i].content.substring(0, 22) + "..."
-            }
-            if (response.data.rows[i].article_title.length > 22) {
-              response.data.rows[i].article_title = response.data.rows[i].article_title.substring(0, 22) + "..."
-            }
+            // if (response.data.rows[i].content.length > 22) {
+            //   response.data.rows[i].content = response.data.rows[i].content.substring(0, 22) + "..."
+            // }
+            // if (response.data.rows[i].article_title.length > 22) {
+            //   response.data.rows[i].article_title = response.data.rows[i].article_title.substring(0, 22) + "..."
+            // }
           }
-          console.log(response)
+
+          // console.log(response)
+          // console.log(postdata)
           that.total = response.data.count
           that.commentData = response.data.rows
+          console.log(postdata)
+          console.log(response.data.rows)
         })
-        .catch(function (error) {
-          console.log(error)
+        // .catch(function (error) {
+        //   console.log(error)
+        // })
+        .catch((e) => {
+          console.log(e)
         })
     }
   },

@@ -14,7 +14,7 @@ module.exports = app => {
     author_id: {
       type: STRING,
       allowNull: false,
-    }, // 作者id
+    }, // 角色id
     article_id: {
       type: STRING,
       allowNull: false,

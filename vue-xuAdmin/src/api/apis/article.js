@@ -12,7 +12,7 @@ export default {
   fetchAddArticle (data) {
     return axios.post(articleUrls.addArticle, data)
   },
-  // 文章列表 订单
+  // 列表 订单
   fetchArticleList () {
     return axios.post(articleUrls.articleList)
   },

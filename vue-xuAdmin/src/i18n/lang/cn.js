@@ -13,7 +13,7 @@ const cn = {
     publishArticleEditor: "发表文章-富文本",
     articleList: "订单列表",
     viewOrder: "订单详情",
-    commentList: "评论列表",
+    commentList: "投诉管理",
     userManage: "用户管理",
     userList: "用户列表",
     editPassword: "修改密码",

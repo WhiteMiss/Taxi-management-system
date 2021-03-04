@@ -20,7 +20,7 @@ module.exports = app => {
     author: {
       type: STRING,
       allowNull: false,
-    }, // 作者
+    }, // 角色
     read_num: {
       type: INTEGER,
       defaultValue: 0,

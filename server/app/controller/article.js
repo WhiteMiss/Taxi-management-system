@@ -8,7 +8,7 @@
 const Controller = require("../core/base_controller")
 
 class ArticleController extends Controller {
-  // 发表文章
+  // 发表订单
   async addArticle () {
     let result = {}
     const articleData = this.ctx.request.body
@@ -18,12 +18,12 @@ class ArticleController extends Controller {
     if (articleResult) {
       result = {
         code: 200,
-        message: "文章发布成功",
+        message: "订单发布成功",
       }
     } else {
       result = {
         code: 10000,
-        message: "文章发布失败,请重试",
+        message: "订单发布失败,请重试",
       }
     }
     this.ctx.body = result
@@ -43,7 +43,7 @@ class ArticleController extends Controller {
     this.ctx.body = list
   }
 
-  // 文章回显
+  // 回显
   async getArticle () {
     const id = this.ctx.request.body.id
     const result = await this.ctx.service.article.getArticle(id)

@@ -32,7 +32,7 @@
           <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
       </el-form-item>
-      <el-form-item label="banner图上传" label-width="110px">
+      <el-form-item label="人物图上传" label-width="110px">
         <el-upload
           class="avatar-uploader"
           action="/api/editor/uploadImg"
