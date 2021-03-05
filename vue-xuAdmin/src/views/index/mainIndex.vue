@@ -27,7 +27,7 @@
             <li>
               <router-link to="/roleManage" class="kjfs kjfs-yelloww"
                 ><span><i class="fa fa-universal-access fa-2x"></i></span
-                ><span>权限测试</span></router-link
+                ><span>角色管理</span></router-link
               >
             </li>
           </ul>

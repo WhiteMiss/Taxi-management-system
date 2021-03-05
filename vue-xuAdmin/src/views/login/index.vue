@@ -85,8 +85,8 @@ export default {
       dialogVisible: false,
       smdl: true,
       loginForm: {
-        username: "admin",
-        password: "admin"
+        username: "",
+        password: ""
       },
       titleList: [
         "这晚霞清风，山川河海，所有的温柔陷落都是神明的，神明是你的，我也是你的",
