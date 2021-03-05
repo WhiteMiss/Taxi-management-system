@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-alert
-      title="紧急情况提示"
+      title="紧急预案提示"
       type="warning"
       description="行程平台全程监控，保证安全，有事可拨打热线12345678901"
       show-icon
@@ -97,14 +97,14 @@
             </li>
             <li>
               <router-link to="#"
-                ><span>待审帖子</span><span class="num">10</span></router-link
+                ><span>待审帖子</span><span class="num">0</span></router-link
               >
             </li>
           </ul>
           <ul>
             <li>
               <router-link to="#"
-                ><span>待审订单</span><span class="num">30</span></router-link
+                ><span>待审订单</span><span class="num">2</span></router-link
               >
             </li>
             <li>

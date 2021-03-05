@@ -17,7 +17,7 @@
       </el-table-column>
       <el-table-column
         prop="age"
-        label="年龄">
+        label="身份证号码">
       </el-table-column>
       <el-table-column
         prop="name"

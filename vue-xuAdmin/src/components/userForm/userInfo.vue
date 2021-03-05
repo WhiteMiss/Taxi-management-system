@@ -40,8 +40,8 @@
           <el-radio label="2">女</el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item label="年龄" prop="age">
-        <el-input v-model="ruleForm2.age" autocomplete="off"></el-input>
+      <el-form-item label="身份证号码" prop="age">
+        <el-input v-model="ruleForm2.age" autocomplete="off" maxlength="18" show-word-limit></el-input>
       </el-form-item>
       <el-form-item label="手机号" prop="mobile_phone">
         <el-input v-model="ruleForm2.mobile_phone" autocomplete="off"></el-input>
@@ -135,7 +135,11 @@ export default {
         ],
         role_id: [
           { required: true, message: "请选择用户角色", trigger: "change" }
-        ]
+        ],
+        age: [
+          { required: true, message: "请输入身份证号", trigger: "blur" },
+          { min: 18, max: 18, message: "长度为 18 个字符", trigger: "blur" }
+        ],
       }
     }
   },

@@ -9,7 +9,7 @@ import enLocale from "element-ui/lib/locale/lang/en"
 const en = {
   routeName: {
     home: "home",
-    article: "article",
+    article: "order",
     publishArticle: "publishArticle",
     publishArticleEditor: "publishArticle",
     articleList: "articleList",
@@ -27,7 +27,12 @@ const en = {
     systemManage: "systemManage",
     unitManage: "unitManage",
     roleManage: "roleManage",
-    systemSetting: "systemSetting"
+    systemSetting: "systemSetting",
+    forum: "forum",
+    forumindex: "forumindex",
+    postDetails: "postDetails",
+    integral: "integral",
+    exchange: "exchange"
   },
   rightMenu: {
     close: "close",

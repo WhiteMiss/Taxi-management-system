@@ -15,7 +15,7 @@ module.exports = app => {
     password: { type: STRING, allowNull: false }, // 密码
     name: STRING, // 姓名
     sex: { type: STRING, defaultValue: "1" }, // 用户性别：1男性, 2女性, 0未知
-    age: { type: INTEGER, defaultValue: 0 }, // 年龄
+    age: { type: STRING, defaultValue: 0 }, // 年龄
     avatar: STRING, // 头像
     company: STRING, // 公司
     department: STRING, // 部门

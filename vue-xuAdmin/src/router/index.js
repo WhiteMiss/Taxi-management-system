@@ -202,7 +202,7 @@ let addRouter = [
         r_name: roleName.forumindex,
         path: "/forumindex",
         iconCls: "el-icon-connection", // 图标样式class
-        name: "forum",
+        name: "forumindex",
         component: () => import("@/views/forum/forumindex"),
         children: []
       },
