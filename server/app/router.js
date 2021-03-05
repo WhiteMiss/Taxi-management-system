@@ -31,6 +31,9 @@ module.exports = app => {
   // 删除评论
   router.post("/comment/delComment", isLogin, controller.comment.delComment)
 
+  // xieaho商城订单删除
+  router.post("/orders/delOrder", isLogin, controller.orders.delOrder)
+
   router.post("/wxLogin", controller.admin.login.wxLogin)
   router.post("/decryptData", controller.getShareInfo.decryptData)
 
