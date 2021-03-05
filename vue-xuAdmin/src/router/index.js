@@ -237,6 +237,26 @@ let addRouter = [
       }
     ]
   },
+  { // 订单详情
+    r_id: 100090,
+    r_name: roleName.orders,
+    path: "/",
+    iconCls: "el-icon-goods", // 图标样式class
+    name: "orders",
+    component: () => import("@/views/layout/layout"),
+    meta: {role: ["superAdmin", "admin"]},
+    children: [
+      {
+        r_id: 100091,
+        r_name: roleName.OrderDetails,
+        path: "/OrderDetails",
+        iconCls: "el-icon-shopping-bag-1", // 图标样式class
+        name: "OrderDetails",
+        component: () => import("@/views/orders/OrderDetails"),
+        children: []
+      }
+    ]
+  },
   {
     path: "*",
     redirect: "/404",

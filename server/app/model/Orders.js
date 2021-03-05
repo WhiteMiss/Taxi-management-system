@@ -10,7 +10,7 @@ module.exports = app => {
     order_price: { type: DECIMAL(7, 2), allowNull: false },
     order_name: { type: STRING(255), allowNull: false },
     pay_status: { type: ENUM("未支付", "已支付", "已过期"), defaultValue: "未支付", allowNull: false },
-    qr_url: { type: STRING(255), allowNull: false },
+    qr_url: { type: STRING(255), allowNull: true },
     qr_price: { type: DECIMAL(7, 2), allowNull: false },
     redirect_url: { type: STRING(255), allowNull: false },
     extension: { type: STRING(255) },

@@ -32,7 +32,9 @@ const en = {
     forumindex: "forumindex",
     postDetails: "postDetails",
     integral: "integral",
-    exchange: "exchange"
+    exchange: "exchange",
+    orders: "orders",
+    OrderDetails: "OrderDetails"
   },
   rightMenu: {
     close: "close",

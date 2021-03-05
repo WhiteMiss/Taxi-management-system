@@ -16,7 +16,8 @@ import "./assets/iconfont/iconfont.css"
 import "font-awesome/css/font-awesome.css"
 import "@/router/permission"
 import dataV from "@jiaminghi/data-view"
-
+// 引入echart
+import echarts from "echarts"
 // 地图
 import AMap from "vue-amap"
 
@@ -28,7 +29,7 @@ Vue.use(ElementUI)
 Vue.use(globalPlugin)
 Vue.use(permission)
 Vue.use(dataV)
-
+Vue.prototype.$echarts = echarts
 
 NProgress.inc(0.2)
 NProgress.configure({ easing: "ease", speed: 500, showSpinner: false })

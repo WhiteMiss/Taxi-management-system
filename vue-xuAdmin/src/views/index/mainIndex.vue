@@ -92,7 +92,7 @@
           <ul>
             <li>
               <router-link to="#"
-                ><span>待审评论</span><span class="num">23</span></router-link
+                ><span>待审评论</span><span class="num">03</span></router-link
               >
             </li>
             <li>
@@ -104,7 +104,7 @@
           <ul>
             <li>
               <router-link to="#"
-                ><span>待审订单</span><span class="num">2</span></router-link
+                ><span>待审订单</span><span class="num">02</span></router-link
               >
             </li>
             <li>
@@ -134,13 +134,19 @@
         </div>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :span="24">
+    <el-row :gutter="20">
+      <el-col :span="16">
         <line-echarts
           id="lineEcharts"
           height="300px"
           ref="echarts"
         ></line-echarts>
+      </el-col>
+       <el-col :span="8">
+         <div  >
+      <clock id="lineEcharts"
+          height="300px" />
+      </div>
       </el-col>
     </el-row>
     <el-row>
@@ -153,13 +159,15 @@
 
 <script>
 import LineEcharts from "../../components/ECharts/lineEcharts"
+import clock from "../../components/Dialog/clock"
 import Maintable from "../table/maintable"
+
 // import { AMapManager } from 'vue-amap';
 // eslint-disable-next-line no-undef
 
 export default {
   name: "mainIndex",
-  components: { Maintable, LineEcharts },
+  components: { Maintable, LineEcharts, clock },
   data () {
     const self = this
     return {

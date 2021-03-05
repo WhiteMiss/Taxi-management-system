@@ -30,7 +30,9 @@ const cn = {
     forumindex: "志愿者论坛",
     postDetails: "查看帖子",
     integral: "积分奖励",
-    exchange: "积分兑换"
+    exchange: "积分兑换",
+    orders: "物流模块",
+    OrderDetails: "商品消息"
   },
   rightMenu: {
     close: "关闭",
