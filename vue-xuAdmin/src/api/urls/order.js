@@ -5,8 +5,7 @@
  * Description: 文件描述
  */
 export default {
- 
-    // 删除
-    delOrder: "/orders/delOrder"
-  }
-  
+
+  // 删除
+  delOrder: "/orders/delOrder"
+}

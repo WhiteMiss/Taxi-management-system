@@ -45,7 +45,7 @@
     >
     <el-table-column
       prop="id"
-      label="日期"
+      label="id"
       sortable
       width="180">
     </el-table-column>
@@ -74,6 +74,7 @@ export default {
     deleteRow (index, rows) {
       rows.splice(index, 1)
     }
+    // ,
     // handleDelete (index, row) {
     //   console.log(index, row)
     //   let that = this

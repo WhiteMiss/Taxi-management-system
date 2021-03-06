@@ -3,7 +3,7 @@
     <el-alert
       title="紧急预案提示"
       type="warning"
-      description="行程平台全程监控，保证安全，有事可拨打热线12345678901"
+      description="行程平台全程监控，保证安全，有事可拨打紧急电话12345678901"
       show-icon
     >
     </el-alert>
